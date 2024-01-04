@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeddingMApp.Views.AppointPage"
+             BackgroundColor="#F5C6A5"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="ToolbarItem_Clicked" Text="Logout" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView
+            x:Name="AppListView"
+            BackgroundColor="Transparent"
+            HasUnevenRows="true"
+            IsPullToRefreshEnabled="True"
+            ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Frame 
+                                    CornerRadius="20"
+                                    HasShadow="True">
+                                    <StackLayout>
+                                        <Grid Padding="10" RowSpacing="9" ColumnSpacing="8">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Grid.RowSpan="5"
+                                            Source="event.png"
+                                            />
+                                            <Label
+                                            Grid.Column="1"
+                                            Grid.Row="1"
+                                            VerticalOptions="Center"
+                                            Text="{Binding SUBJECT}"
+                                            TextColor="#FF7777"
+                                            FontSize="Medium"/>
+                                            <Label
+                                            Grid.Column="1"
+                                            Grid.Row="2"
+                                            VerticalOptions="Center"
+                                            Text="{Binding DATE}"
+                                            FontSize="Medium"
+                                            TextColor="#A3A3A3"
+                                            />
+                                            <Label
+                                            Grid.Column="1"
+                                            Grid.Row="3"
+                                            VerticalOptions="Center"
+                                            Text="{Binding TIME}"
+                                            TextColor="#A3A3A3"
+                                            FontSize="Medium"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

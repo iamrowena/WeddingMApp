@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WeddingMApp"
+             x:Class="WeddingMApp.UserPage">
+    
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="bg.png" />
+    </ContentPage.BackgroundImageSource>
+
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!-- Put the main content in a Grid with two rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView>
+            <!-- Use a Frame to wrap the Welcome, Slideshow, and Templates -->
+       
+                <StackLayout Spacing="10">
+                    <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label x:Name="welcomeLabel" Text="Welcome" Margin="0,20,0,20" HorizontalOptions="Center" FontAttributes="Bold" FontSize="25" TextColor="White">
+                    </Label>
+
+                </StackLayout>
+                        
+                  
+               
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Button x:Name="logoutButton"  FontAttributes="Bold" FontSize="18" Text="Logout" Clicked="LogoutClicked" BackgroundColor="#db7093" WidthRequest="300" CornerRadius="25" HeightRequest="50" Margin="0,20,0,0" />
+
+
+                </StackLayout>
+                </StackLayout>
+          
+        </ScrollView>
+      
+         
+      </Grid>
+    
+</ContentPage>

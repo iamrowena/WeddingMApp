@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeddingMApp.Views.TaskDetailPage"
+             BackgroundColor="#F5C6A5">
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Padding="20" Spacing="12">
+                <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="weddingicon.png" Aspect="AspectFit" HeightRequest="200" WidthRequest="300" Margin="20,0,10,0"/>
+                    <Label 
+                Grid.Row="1"
+                Margin="0,15,0,20"
+                HorizontalOptions="Center"
+                Text="Wedding Details Details"
+                TextColor="#FF7777"
+                FontSize="Large"/>
+                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <!-- Adjusted to "Auto" width for the icon -->
+                        <ColumnDefinition Width="*" />
+                        <!-- Adjusted to "*" width for the label and entry -->
+                    </Grid.ColumnDefinitions>
+                    <Label
+                Grid.Column="1"
+                Grid.Row="2"
+                VerticalOptions="Center"
+                Text="{Binding NAME}"
+                TextColor="#852747"
+                FontSize="Medium"/>
+                    <Label
+                Grid.Column="1"
+                Grid.Row="3"
+                VerticalOptions="Center"
+                Text="{Binding PACKAGE}"
+                TextColor="#852747"
+                FontSize="Medium"/>
+                    <Label
+                Grid.Column="1"
+                Grid.Row="4"
+                VerticalOptions="Center"
+                Text="{Binding SERVICES}"
+                FontSize="Medium"
+                TextColor="#852747"
+                />
+                    <Label
+                Grid.Column="1"
+                Grid.Row="5"
+                VerticalOptions="Center"
+                Text="{Binding WED_DETAILS}"
+                TextColor="#852747"
+                FontSize="Medium"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

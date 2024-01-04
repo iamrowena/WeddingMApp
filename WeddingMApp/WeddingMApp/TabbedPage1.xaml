@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeddingMApp.TabbedPage1"
+            xmlns:local="clr-namespace:WeddingMApp"
+            xmlns:local2="clr-namespace:WeddingMApp.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            BarBackgroundColor="#FF7777"
+            UnselectedTabColor="#474747"
+            SelectedTabColor="#FDF4F5"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    
+    <!--Pages can be added as references or inline-->
+    <local:TaskPage Title="Wedding Details" BackgroundColor="#F5C6A5"/>
+    <local2:AppointPage Title="Appointments" BackgroundColor="#F5C6A5"/>
+</TabbedPage>
